@@ -1,0 +1,36 @@
+{
+  "datasets": {
+    "winogrande": {
+      "huggingface_id": "allenai/winogrande",
+      "config": "winogrande_xl",
+      "total_samples": 43432,
+      "min_sample_size_95pct_5pct": 382,
+      "description": "WinoGrande dataset for commonsense reasoning"
+    },
+    "ethics_commonsense": {
+      "huggingface_id": "Hendrycks/ethics",
+      "config": "commonsense",
+      "total_samples": 21759,
+      "min_sample_size_95pct_5pct": 379,
+      "description": "ETHICS commonsense morality dataset"
+    },
+    "complex_web_questions": {
+      "huggingface_id": "drt/complex_web_questions",
+      "config": "complex_web_questions",
+      "total_samples": 31158,
+      "min_sample_size_95pct_5pct": 381,
+      "description": "ComplexWebQuestions dataset for complex reasoning"
+    }
+  },
+  "statistical_parameters": {
+    "confidence_level": 0.95,
+    "margin_of_error": 0.05,
+    "assumed_proportion": 0.5,
+    "z_score": 1.96,
+    "infinite_population_sample_size": 385
+  },
+  "notes": {
+    "finite_population_correction": "Applied to reduce required sample size for finite populations",
+    "calculation_formula": "n = ceil((n0 * N) / (n0 + N - 1)) where n0 = ceil(Z^2 * p * (1-p) / E^2)"
+  }
+}
